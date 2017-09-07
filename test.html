@@ -1,0 +1,29 @@
+<div id="scores">
+Loading scoreboard...
+</div>
+<script>
+function httpGetAsync(theUrl) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            document.getElementById("scores").innerHTML = processResult(JSON.parse(xmlHttp.responseText));
+        }
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send();
+}
+
+function processResult(result) {
+    let returnHtml = "";
+    for (let i in result) {
+        let data = result[i];
+        returnHtml += "<table><tr><th>" + i.toUpperCase() + "</th></tr>";
+        returnHtml += "<tr><td><i>" + data.cleanDate + " " + data.time + "</i></td></tr>";
+        returnHtml += "<tr><td>Davis High</td><td>" + data.dhsScore + "</td></tr>";
+        returnHtml += "<tr><td>" + data.opponent + "</td><td>" + data.oppScore + "</td></tr>";
+        if(data.link.length > 0) returnHtml += "<tr><td><a href=\"" + data.link + "\" target=\"_blank\">Read our coverage >></a></td></tr></table>"; 
+    }
+    return returnHtml;
+}
+httpGetAsync('https://sports-nineage.c9users.io/recent/');
+</script>

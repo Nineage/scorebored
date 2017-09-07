@@ -1,0 +1,22 @@
+{
+  "name": "sports-news",
+  "version": "1.0.0",
+  "description": "Allows for the management of sports coverage by a news organization",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "compression": "^1.7.0",
+    "cors": "^2.8.4",
+    "dateformat": "^2.0.0",
+    "express": "^4.15.2",
+    "helmet": "^3.8.1",
+    "origindb": "^2.6.1",
+    "pug": "^2.0.0-rc.3",
+    "uuid": "^3.0.1"
+  }
+}

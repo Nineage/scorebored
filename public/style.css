@@ -1,0 +1,48 @@
+ul {
+    list-style-type: none;
+}
+
+.sport {
+    display: inline;
+    margin-right: 1%;
+}
+
+#sports-choice {
+    color: white;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    padding-left: 1%;
+    border: solid black 1px;
+}
+
+#game-menu {
+    padding: 1%;
+}
+
+#home-main-content {
+    margin-left: 0;
+}
+
+#new-game {
+    float: right;
+}
+
+#submit-btn {
+    float: right;
+}
+
+#game-editor {
+    padding: 1%;
+}
+
+#new-game-editor {
+    padding: 1%;
+}
+
+input {
+    margin-bottom: 3%;
+}
+
+.game-choice {
+    margin-bottom: 1.5%;
+}
